@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <DefHeader/>ййййй
     <main class="main flex-1 bg-transparent">
       <HeroSection/>
       <CardsSection/>
