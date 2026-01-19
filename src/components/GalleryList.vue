@@ -14,6 +14,7 @@
 
 <script>
 import GalleryItem from './GalleryItem.vue';
+import background1 from '/src/assets/img/main/background.webp';
 
 	export default {
 		name: 'GalleryList',
@@ -24,37 +25,37 @@ import GalleryItem from './GalleryItem.vue';
 			return {
 				cards: [
 					{
-						src: new URL('@/assets/img/main/background.webp', import.meta.url).href,
+						src: background1,
 						name: 'Эпичные постройки',
 						description: 'Массивные творческие структуры',
 						date: 'Январь 15, 2026'
 					},
 					{
-						src: new URL('@/assets/img/main/background.webp', import.meta.url).href,
+						src: background1,
 						name: 'Современные здания',
 						description: 'Уникальные архитектурные решения',
 						date: 'Февраль 3, 2026'
 					},
 					{
-						src: new URL('@/assets/img/main/background.webp', import.meta.url).href,
+						src: background1,
 						name: 'Город будущего',
 						description: 'Футуристические конструкции',
 						date: 'Март 10, 2026'
 					},
 					{
-						src: new URL('@/assets/img/main/background.webp', import.meta.url).href,
+						src: background1,
 						name: 'Масштабные проекты',
 						description: 'Невероятные инженерные идеи',
 						date: 'Апрель 22, 2026'
 					},
 					{
-						src: new URL('@/assets/img/main/background.webp', import.meta.url).href,
+						src: background1,
 						name: 'Творческие сооружения',
 						description: 'Креативные конструкции со всего мира',
 						date: 'Май 5, 2026'
 					},
 					{
-						src: new URL('@/assets/img/main/background.webp', import.meta.url).href,
+						src: background1,
 						name: 'Архитектурные чудеса',
 						description: 'Искусство в строительстве',
 						date: 'Июнь 18, 2026'
