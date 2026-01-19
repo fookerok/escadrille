@@ -1,0 +1,29 @@
+{
+  "name": "escadrille",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fontsource/lato": "^5.2.7",
+    "@tailwindcss/vite": "^4.1.17",
+    "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "autoprefixer": "^10.4.23",
+    "fast-glob": "^3.3.3",
+    "postcss": "^8.5.6",
+    "sass": "^1.96.0",
+    "tailwindcss": "^4.1.18",
+    "vite": "npm:rolldown-vite@7.2.5",
+    "vite-plugin-svg-icons": "^2.0.1"
+  },
+  "overrides": {
+    "vite": "npm:rolldown-vite@7.2.5"
+  }
+}
