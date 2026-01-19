@@ -2,7 +2,7 @@
 	<section class="hero-section text-center">
 		<div class="info-container">
 			<CounterPlayers/>
-			<h1 class="title"> <span class="primary">EscaDrille</span> Server</h1>
+			<h1 class="title max-lg:!mt-4"> <span class="primary">EscaDrille</span> Server</h1>
 			<div class="feed__hashtag-wrapper w-full">
 				<div class="feed__hashtag inline-flex gap-2">
 					<Hashtag :hashtags="[
@@ -24,14 +24,14 @@
 					]" />
 				</div>
 			</div>
-			<div class="subtitle">
+			<div class="subtitle max-lg:!text-base">
 				Присоединяйтесь в&nbsp;захватывающее приключение на&nbsp;выживание. Стройте, исследуйте и&nbsp;покоряйте мир, созданный вами.
 			</div>
-			<div class="flex gap-4 justify-center !mb-16">
+			<div class="flex gap-4 justify-center min-md:!mb-16 !mb-4">
 				<a href="#" class="btn-a">Играть</a>
 				<a href="#" class="btn-a btn-a--transparent">Правила</a>
 			</div>
-			<div class="hero-list__card flex justify-around">
+			<div class="hero-list__card flex justify-around [@media(max-width:620px)]:gap-4 [@media(max-width:620px)]:flex-col">
 				<div class="hero-item__card flex flex-col items-center">
 					<div class="bg-green icon-block">
 						<SvgIcon class="svg-default" icon="#users"/>
@@ -82,12 +82,22 @@
 	.hero-section{
 		margin: 0 auto;
 		padding: 100px 0 70px;
+		@media (max-width:1024px){
+			padding: 40px 0;
+		}
 	}
 	.info-container{
 		max-width: 768px;
 	}
 	.title{
 		font-size: 6rem;
+		@media (max-width: 1024px){
+			font-size: 4rem;
+			line-height: 1;
+		}
+		@media (max-width: 512px){
+			font-size: 3.5rem;
+		}
 	}
 
 	.subtitle{

@@ -1,9 +1,9 @@
 <template>
 	<figure class="image-card rounded-xl relative aspect-square overflow-hidden">
 		<img class="w-full h-full object-cover" :src="src" alt="">
-		<figcaption class="!p-6 absolute transform bottom-0">
-			<div class="image-card__title !mb-1">{{name}}</div>
-			<div class="image-card__discr">{{description}}</div>
+		<figcaption class="grid grid-rows-[auto_1fr_auto] !p-6 absolute transform bottom-0">
+			<div class="image-card__title !mb-1 line-clamp-1">{{name}}</div>
+			<div class="image-card__discr line-clamp-1">{{description}}</div>
 			<div class="image-card__date">{{date}}</div>
 		</figcaption>
 	</figure>

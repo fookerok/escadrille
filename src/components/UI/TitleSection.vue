@@ -32,9 +32,20 @@
 <style lang="scss" scoped>
 .section__title{
 	font-size: 3rem;
+	@media (max-width:1024px) {
+		font-size: 2.5rem;
+		line-height: 1.2;
+	}
+
+	@media (max-width:768px) {
+		font-size: 2rem;
+	}
 }
 .section__discr{
 	font-size: 1.25rem;
+	@media (max-width:1024px) {
+		font-size: 1rem;
+	}
 	color: $color-neutral-400;
 }
 </style>

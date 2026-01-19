@@ -6,15 +6,20 @@
 			description="Общайтесь с тысячами игроков, делитесь своими постройками, получайте помощь и будьте в курсе последних новостей и событий сервера." 
 			dClass="max-w-2xl !my-0 !mx-auto"
 		/>
-		<div class="flex justify-between">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/kO89vRsJfZA?si=pDzkcywGIcqJ2be0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-			</iframe>
-			<div class="cards-contact flex flex-col justify-between">
-				<div v-for="(contact, index) in contacts" :key="index" class="cards-contact__item flex gap-4 !p-4 items-center">
-					<a :href="contact.href" class="cards-contact__link flex justify-center items-center rounded-lg" :class="contact.class">
+		<div class="flex justify-between gap-8 max-lg:flex-col max-lg:items-center">
+			<div class="aspect-video w-[560px] max-md:w-full">
+				<iframe
+					class="w-full h-full rounded-lg"
+					src="https://www.youtube.com/embed/kO89vRsJfZA"
+					allowfullscreen>
+				</iframe>
+			</div>
+			<div class="cards-contact grid auto-rows-fr gap-4 flex-co max-md:w-full">
+				<div v-for="(contact, index) in contacts" :key="index" class="cards-contact__item flex gap-4 !p-4 items-stretch">
+					<a :href="contact.href" class="flex-shrink-0 cards-contact__link flex justify-center items-center rounded-lg" :class="contact.class">
 						<SvgIcon class="svg-default" :icon="contact.icon" />
 					</a>
-					<div class="flex flex-col">
+					<div class="flex flex-col gap-1">
 						<div class="cards-contact__title">{{ contact.title }}</div>
 						<div class="cards-contact__discr">{{ contact.description }}</div>
 					</div>

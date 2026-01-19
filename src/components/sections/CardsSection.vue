@@ -6,7 +6,7 @@
 				description="Окунитесь в мир Minecraft, как никогда раньше, благодаря тщательно разработанным функциям и преданному сообществу." 
 				dClass=" max-w-2xl !my-0 !mx-auto"
 			/>
-			<div class="cards__list grid grid-cols-3 gap-6">
+			<div class="cards__list grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				<CardReception 
 					cardColor="var(--color-emerald-500)" 
 					icon="#sword"

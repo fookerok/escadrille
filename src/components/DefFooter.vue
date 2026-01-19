@@ -1,17 +1,16 @@
 <template>
 	<footer class="footer flex gap-2 flex-col">
 		<div class="top__footer">
-			<div class="info-container flex justify-between items-center">
+			<div class="info-container flex max-md:flex-col justify-between items-center">
 				<a href="/" class="logo__link flex items-center gap-3">
 					<img src="../assets/icons/logo.svg" alt="" class="logo">
 					Escadrille
 				</a>
-				<div class="link__container flex gap-4">
+				<div class="link__container flex max-md:flex-col min-md:gap-4 text-center">
 					<a href="#" class="btn-link">Регистрация</a>
 					<a href="#" class="btn-link">Как начать играть?</a>
 					<a href="#" class="btn-link">Правила проекта</a>
 				</div>
-
 			</div>
 		</div>
 		<div class="bottom__footer text-center">
@@ -24,7 +23,6 @@
 </template>
 
 <script>
-	
 	export default {
 		name: 'DefFooter'
 	}

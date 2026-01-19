@@ -9,22 +9,22 @@
 				<h3 class="container-adress__title">
 					IP Адрес сервера
 				</h3>
-				<div class="flex justify-center gap-4 !pb-4">
+				<div class="flex justify-center items-center gap-4 !pb-4">
 					<div class="container-adress__ip-value" id="ip-value">{{ip}}</div>
 					<button @click="copyIp" type="button" class="copy-btn flex justify-center items-center cursor-pointer">
 						<SvgIcon class="svg-default" icon="#copy"/>
 					</button>
 				</div>
-				<div class="server-info flex gap-4 justify-between  !pt-4">
-					<div class="server-info__item w-1/3 text-center">
+				<div class="server-info flex max-sm:flex-col gap-4 justify-between items-center !pt-4">
+					<div class="server-info__item [@media(min-width:480px)]:w-1/3 text-center">
 						<div class="server-info__title">Версия</div>
 						<div class="server-info__value">1.20.x - 1.21.x</div>
 					</div>
-					<div class="server-info__item w-1/3 text-center">
+					<div class="server-info__item [@media(min-width:480px)]:w-1/3 text-center">
 						<div class="server-info__title">Режим игры</div>
 						<div class="server-info__value">Выживание</div>
 					</div>
-					<div class="server-info__item w-1/3 text-center">
+					<div class="server-info__item [@media(min-width:480px)]:w-1/3 text-center">
 						<div class="server-info__title">Статус</div>
 						<div class="server-info__value">Online</div>
 					</div>
@@ -42,7 +42,7 @@ import TitleSection from '../UI/TitleSection.vue';
 		name: "AdressSection",
 		data() {
 			return {
-				ip: "69.96.69.96:6996"
+				ip: "12.34.56.78:91011"
 			};
 		},
 		methods: {
@@ -68,6 +68,9 @@ import TitleSection from '../UI/TitleSection.vue';
 		&__ip-value{
 			color: $color-emerald-400;
 			font-size: 2.25rem;
+			@media (max-width: 480px) {
+				font-size: 1.25rem;
+			}
 		}
 	}
 	.copy-btn{
@@ -75,6 +78,15 @@ import TitleSection from '../UI/TitleSection.vue';
 		height: 48px;
 		background-color: $color-emerald-400;
 		border-radius: 10px;
+		@media (max-width: 480px) {
+			width: 24px;
+			height: 24px;
+			border-radius: 5px;
+			.svg-default{
+				width: 16px;
+				height: 16px;
+			}
+		}
 	}
 	.server-info{
 		border-top: 1px solid #555454;

@@ -1,7 +1,7 @@
 <template>
 	<div class="counter-players inline-flex items-center gap-2">
 		<div class="counter-players__indicator"></div>
-		<div class="counter-players__value">Онлайн сервера - 69 игроков</div>
+		<div class="counter-players__value">Онлайн сервера - 68 игроков</div>
 	</div>
 </template>
 

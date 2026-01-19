@@ -1,6 +1,6 @@
 <template>
 	<div 
-	class="grid grid-cols-3 gap-6">
+	class="grid grid-cols-2 lg:grid-cols-3 [@media(max-width:480px)]:grid-cols-1 gap-6">
 	<GalleryItem
 		v-for="(card, index) in cards"
 		:key="index"

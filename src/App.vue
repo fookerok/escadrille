@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col min-h-screen">
+    <DefHeader/>
     <main class="main flex-1 bg-transparent">
       <HeroSection/>
       <CardsSection/>
@@ -88,6 +89,7 @@
     background-color: $color-emerald-400;
     padding: 8px 24px;
     border-radius: 10px;
+    text-align: center;
     &--transparent{
       background-color: rgba($color: #000000, $alpha: 0.5);
       border: 1px solid $color-neutral-400;
@@ -127,6 +129,9 @@
   }
   .section{
     padding: 70px 0;
+    @media (max-width:1024px){
+      padding: 40px 0;
+    }
   }
   .section__primary-bg{
     background-color: $color-neutral-900;
