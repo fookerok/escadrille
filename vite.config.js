@@ -5,6 +5,7 @@ import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'path'
 
 export default defineConfig({
+  base: '/',
   plugins: [
     vue(),
     tailwindcss(),

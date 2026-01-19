@@ -8,7 +8,7 @@
 		:name="card.name"
 		:description="card.description"
 		:date="card.date"
-    />
+	/>
 	</div>
 </template>
 
