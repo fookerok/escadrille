@@ -14,7 +14,7 @@
 
 <script>
 import GalleryItem from './GalleryItem.vue';
-import background1 from '/src/assets/img/main/background.webp';
+import background1 from '../assets/img/main/background.webp'
 
 	export default {
 		name: 'GalleryList',
