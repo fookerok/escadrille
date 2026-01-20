@@ -1,14 +1,31 @@
 <template>
 	<div class="counter-players inline-flex items-center gap-2">
 		<div class="counter-players__indicator"></div>
-		<div class="counter-players__value">Онлайн сервера - 68 игроков</div>
+		<div class="counter-players__value">Онлайн сервера - <span id="count-players">{{ online }}</span> игроков</div>
 	</div>
 </template>
 
 <script>
+	import { ref, onMounted } from 'vue';
+
 	export default {
-		name: 'CounterPlayers'
+		name: 'CounterPlayers',
+		data(){
+			return{
+				online: 0
+			};
+		},
+		async mounted() {
+			const fetchOnline = async () => {
+				const res = await fetch ('https://api.mcstatus.io/v2/status/java/hypixel.net');
+				const data = await res.json();
+				this.online = data.players.online;
+			};
+			fetchOnline();
+			setInterval(fetchOnline, 1000);
+		}
 	}
+
 </script>
 
 <style lang="scss" scoped>
