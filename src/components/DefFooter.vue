@@ -16,7 +16,7 @@
 		<div class="bottom__footer text-center">
 			<div class="info-container">
 				© 2026 escadrille.com<br>
-				Разработка by DimaRojer
+				<a href="https://dimarojer.vercel.app/">Разработка by DimaRojer</a>
 			</div>
 		</div>
 	</footer>
