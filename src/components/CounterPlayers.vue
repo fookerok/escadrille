@@ -17,7 +17,7 @@
 		},
 		async mounted() {
 			const fetchOnline = async () => {
-				const res = await fetch ('https://api.mcstatus.io/v2/status/java/hypixel.net');
+				const res = await fetch ('https://api.mcstatus.io/v2/status/java/194.34.239.250:25565');
 				const data = await res.json();
 				this.online = data.players.online;
 			};
