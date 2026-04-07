@@ -7,7 +7,6 @@
 					Escadrille
 				</a>
 				<div class="link__container flex max-md:flex-col min-md:gap-4 text-center">
-					<a href="#" class="btn-link">Регистрация</a>
 					<a href="#" class="btn-link">Как начать играть?</a>
 					<a href="#" class="btn-link">Правила проекта</a>
 				</div>

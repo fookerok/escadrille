@@ -31,7 +31,11 @@
 				</div>
 			</div>
 		</div>
-		
+		<transition name="fade">
+			<div v-if="copied" class="copy-toast">
+				IP скопирован!
+			</div>
+		</transition>
 	</section>
 
 </template>
@@ -43,12 +47,19 @@ import TitleSection from '../UI/TitleSection.vue';
 		name: "AdressSection",
 		data() {
 			return {
-				ip: "12.34.56.78:91011"
+				ip: "12.34.56.78:91011",
+				copied: false
 			};
 		},
 		methods: {
 			copyIp(){
-				navigator.clipboard.writeText(this.ip)
+				navigator.clipboard.writeText(this.ip).then(() => {
+					this.copied = true;
+
+					setTimeout(() => {
+						this.copied = false;
+					}, 2000);
+				});
 			}
 		}
 	}
@@ -94,5 +105,28 @@ import TitleSection from '../UI/TitleSection.vue';
 		&__title{
 			color: $color-neutral-500;
 		}
+	}
+	.copy-toast {
+		position: fixed;
+		bottom: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: #10b981;
+		color: #fff;
+		padding: 12px 20px;
+		border-radius: 10px;
+		font-size: 14px;
+		box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+		z-index: 1000;
+	}
+	.fade-enter-active,
+	.fade-leave-active {
+		transition: all 0.3s ease;
+	}
+
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
+		transform: translateX(-50%) translateY(20px);
 	}
 </style>

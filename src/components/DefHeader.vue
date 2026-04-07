@@ -15,7 +15,6 @@
 				</li>
 			</ul>
 		</nav>
-		<a href="#" class="btn-a hidden md:inline-block">Играть</a>
 	</div>
 </header>
 
@@ -29,9 +28,6 @@
 				<a href="#" @click="closeMenu">{{ item }}</a>
 			</li>
 		</ul>
-		<div class="mt-auto flex flex-col gap-3">
-			<a href="/play" class="btn-a">Играть</a>
-		</div>
 	</div>
 </transition>
 

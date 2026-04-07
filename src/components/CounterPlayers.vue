@@ -6,6 +6,8 @@
 </template>
 
 <script>
+	import { ref, onMounted } from 'vue';
+
 	export default {
 		name: 'CounterPlayers',
 		data(){
@@ -23,6 +25,7 @@
 			setInterval(fetchOnline, 1000);
 		}
 	}
+
 </script>
 
 <style lang="scss" scoped>
